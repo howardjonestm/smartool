@@ -1,0 +1,21 @@
+type Contracts struct {
+	Contract []Contract `json:"contracts"`
+}
+
+type Contract struct {
+	ContType ContractType `json:"contract_type"`
+	DisplayOrder string `json:"display_order"`
+	Hidden bool `json:"hidden"`
+	Id string `json:"id"`
+	Info string `json:"-"`
+	MarketId string `json:"market_id"`
+	Name string `json:"name"`
+	OutcomeTimestamp string `json:"outcome_timestamp"`
+	Slug string `json:"string"`
+	StateOrOutcome string `json:"state_or_outcome"`
+}
+
+type ContractType struct {
+	Name string `json:"name"`
+	Param string `json:"param"`
+}
